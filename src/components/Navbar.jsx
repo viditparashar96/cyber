@@ -59,12 +59,12 @@ function Navbar() {
   }, [location.pathname]);
 
   return (
-    <div className='relative'>
-      <div className='flex z-20 w-full bg-red-300 items-center justify-between p-4 px-6 md:px-10'>
+    <div className='relative shadow-cyan-400 shadow-md'>
+      <div className='flex z-20 w-full  items-center justify-between p-4 px-6 md:px-10'>
         <div>
-          <h1 className='text-4xl font-bold'>Logo</h1>
+          <h1 className='text-4xl font-bold  text-cyan-400'>Logo</h1>
         </div>
-        <div className=' md:flex hidden items-center space-x-10 relative'>
+        <div className=' md:flex hidden items-center space-x-10 relative text-cyan-400'>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/about">About us</NavLink>
           <div className='flex items-center group '>
@@ -90,7 +90,7 @@ function Navbar() {
         <div className='block md:hidden'>
           <button onClick={handleClick}>
 
-            <AiOutlineMenu />
+            <AiOutlineMenu  color='aqua'/>
           </button>
         </div>
 
