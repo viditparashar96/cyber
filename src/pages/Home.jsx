@@ -1,13 +1,13 @@
 import React from 'react'
 import Navbar from '../components/Navbar';
-function Services() {
+function Home() {
   return (
     <div className='text-white'>
-                     <Navbar />
+               <Navbar />
 
-      Services
-      </div>
+        Home
+        </div>
   )
 }
 
-export default Services
+export default Home

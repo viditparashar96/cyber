@@ -5,6 +5,7 @@ import { AiOutlineMenu } from 'react-icons/ai'
 import { AiOutlineClose } from 'react-icons/ai'
 import { useNavigate, useLocation } from 'react-router-dom';
 import { BiSolidRightArrow } from 'react-icons/bi'
+import logo from "../logo.png"
 import '../App.css';
 function Navbar() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -60,10 +61,11 @@ function Navbar() {
   }, [location.pathname]);
 
   return (
-    <div className='relative shadow-cyan-400 shadow-md'>
+    <div className='relative  shadow-cyan-400 shadow-sm'>
       <div className='flex z-20 w-full  items-center justify-between p-7 px-6 md:px-10'>
         <div>
-          <h1 className='text-4xl font-bold  text-cyan-400 mb-5'>Logo</h1>
+          {/* <h1 className='text-4xl font-bold  text-cyan-400 mb-5'>Logo</h1> */}
+          <img src={logo} className='w-[60px] mb-0 md:mb-4' alt="" />
         </div>
         <div className=' md:flex hidden items-center space-x-10 relative text-cyan-400'>
           <NavLink to="/">Home</NavLink>
@@ -73,7 +75,7 @@ function Navbar() {
               <NavLink to="/services">Services </NavLink>
             </button>
             <IoMdArrowDropdown />
-            <div className='servicesBlock shadow-md shadow-cyan-400'>
+            <div className='servicesBlock z-40 transition-all duration-1000 shadow-md shadow-cyan-400'>
               <div className="serviceContainer">
 
                 <div className="block1 block">
@@ -81,42 +83,42 @@ function Navbar() {
                   <div className='mt-5 flex flex-col space-y-5'>
                     <div className='flex items-center  gap-2'>
                       <BiSolidRightArrow fontSize="10px" />
-                      <Link className='a'>Vulnerability and Penetration Testing Services</Link>
+                      <Link className='a transition-all duration-500'>Vulnerability and Penetration Testing Services</Link>
                     </div>
                     <div className='flex items-center  gap-2'>
                       <BiSolidRightArrow fontSize="10px" />
 
-                      <Link className='a'>Source Code Review</Link>
+                      <Link className='a transition-all duration-500'>Source Code Review</Link>
                     </div>
                     <div className='flex items-center  gap-2'>
                       <BiSolidRightArrow fontSize="10px" />
 
-                      <Link className='a'>Server Hardening Testing</Link>
+                      <Link className='a transition-all duration-500'>Server Hardening Testing</Link>
                     </div>
                     <div className='flex items-center  gap-2'>
                       <BiSolidRightArrow fontSize="10px" />
 
-                      <Link className='a'>Firewall Network Devices Security Review</Link>
+                      <Link className='a transition-all duration-500'>Firewall Network Devices Security Review</Link>
                     </div>
                     <div className='flex items-center  gap-2'>
                       <BiSolidRightArrow fontSize="10px" />
 
-                      <Link className='a'> Could Security Configuration Review</Link>
+                      <Link className='a transition-all duration-500'> Could Security Configuration Review</Link>
                     </div>
                     <div className='flex items-center  gap-2'>
                       <BiSolidRightArrow fontSize="10px" />
 
-                      <Link className='a'>AL/ML Devices Security Testing</Link>
+                      <Link className='a transition-all duration-500'>AL/ML Devices Security Testing</Link>
                     </div>
                     <div className='flex items-center  gap-2'>
                       <BiSolidRightArrow fontSize="10px" />
 
-                      <Link className='a'>IOT/SCADA DEvices Security Testing</Link>
+                      <Link className='a transition-all duration-500'>IOT/SCADA DEvices Security Testing</Link>
                     </div>
                     <div className='flex items-center  gap-2'>
                       <BiSolidRightArrow fontSize="10px" />
 
-                      <Link className='a'>Robotics Process Automation(RPA)</Link>
+                      <Link className='a transition-all duration-500'>Robotics Process Automation(RPA)</Link>
                     </div>
 
 
@@ -127,42 +129,42 @@ function Navbar() {
                   <div className='mt-5 flex flex-col space-y-5'>
                     <div className='flex items-center  gap-2'>
                       <BiSolidRightArrow fontSize="10px" />
-                      <Link className='a'>External Security Threat Intelligence</Link>
+                      <Link className='a transition-all duration-500'>External Security Threat Intelligence</Link>
                     </div>
                     <div className='flex items-center  gap-2'>
                       <BiSolidRightArrow fontSize="10px" />
 
-                      <Link className='a'>Honeypot as Service
+                      <Link className='a transition-all duration-500'>Honeypot as Service
                       </Link>
                     </div>
                     <div className='flex items-center  gap-2'>
                       <BiSolidRightArrow fontSize="10px" />
 
-                      <Link className='a'>Incident Response & Malware Analysis
+                      <Link className='a transition-all duration-500'>Incident Response & Malware Analysis
                       </Link>
                     </div>
                     <div className='flex items-center  gap-2'>
                       <BiSolidRightArrow fontSize="10px" />
 
-                      <Link className='a'>Virtual Chief Information Security Officer (V-CISO)
+                      <Link className='a transition-all duration-500'>Virtual Chief Information Security Officer (V-CISO)
                       </Link>
                     </div>
                     <div className='flex items-center  gap-2'>
                       <BiSolidRightArrow fontSize="10px" />
 
-                      <Link className='a'> Virtual Data Protection Officer (VDPO)
+                      <Link className='a transition-all duration-500'> Virtual Data Protection Officer (VDPO)
                       </Link>
                     </div>
                     <div className='flex items-center  gap-2'>
                       <BiSolidRightArrow fontSize="10px" />
 
-                      <Link className='a'>ECP-DR Consulting
+                      <Link className='a transition-all duration-500'>ECP-DR Consulting
                       </Link>
                     </div>
                     <div className='flex items-center  gap-2'>
                       <BiSolidRightArrow fontSize="10px" />
 
-                      <Link className='a'>Vulnerability and Penetration Testing Services</Link>
+                      <Link className='a transition-all duration-500'>Vulnerability and Penetration Testing Services</Link>
                     </div>
 
 
@@ -174,26 +176,26 @@ function Navbar() {
                   <div className='mt-5 flex flex-col space-y-5'>
                     <div className='flex items-center  gap-2'>
                       <BiSolidRightArrow fontSize="10px" />
-                      <Link className='a'>Social Engineering Attack Simulation
+                      <Link className='a transition-all duration-500'>Social Engineering Attack Simulation
                         (SRC- PhaasTM)
                       </Link>
                     </div>
                     <div className='flex items-center  gap-2'>
                       <BiSolidRightArrow fontSize="10px" />
 
-                      <Link className='a'>Red Teaming Exercise
+                      <Link className='a transition-all duration-500'>Red Teaming Exercise
                       </Link>
                     </div>
                     <div className='flex items-center  gap-2'>
                       <BiSolidRightArrow fontSize="10px" />
 
-                      <Link className='a'>Digital Forensics Analysis
+                      <Link className='a transition-all duration-500'>Digital Forensics Analysis
                       </Link>
                     </div>
                     <div className='flex items-center  gap-2'>
                       <BiSolidRightArrow fontSize="10px" />
 
-                      <Link className='a'>Root Cause Analysis</Link>
+                      <Link className='a transition-all duration-500'>Root Cause Analysis</Link>
                     </div>
 
 
@@ -207,25 +209,25 @@ function Navbar() {
                   <div className='mt-5 flex flex-col space-y-5'>
                     <div className='flex items-center  gap-2'>
                       <BiSolidRightArrow fontSize="10px" />
-                      <Link className='a'>Compliance Management
+                      <Link className='a transition-all duration-500'>Compliance Management
                       </Link>
                     </div>
                     <div className='flex items-center  gap-2'>
                       <BiSolidRightArrow fontSize="10px" />
 
-                      <Link className='a'>Information System Audit & Assurance
+                      <Link className='a transition-all duration-500'>Information System Audit & Assurance
                       </Link>
                     </div>
                     <div className='flex items-center  gap-2'>
                       <BiSolidRightArrow fontSize="10px" />
 
-                      <Link className='a'>IT Risk Management
+                      <Link className='a transition-all duration-500'>IT Risk Management
                       </Link>
                     </div>
                     <div className='flex items-center  gap-2'>
                       <BiSolidRightArrow fontSize="10px" />
 
-                      <Link className='a'>Data Protection & Privacy</Link>
+                      <Link className='a transition-all duration-500'>Data Protection & Privacy</Link>
                     </div>
 
 
@@ -242,7 +244,7 @@ function Navbar() {
           <NavLink to="/contact">Contact Us</NavLink>
 
         </div>
-        <div className='block md:hidden'>
+        <div className='inline md:hidden'>
           <button onClick={handleClick}>
 
             <AiOutlineMenu color='aqua' />
@@ -250,7 +252,7 @@ function Navbar() {
         </div>
 
       </div>
-      <div className="overlay">
+      <div className="overlay z-50">
         <div className='p-6 flex items-center justify-end mr-3'>
 
           <AiOutlineClose onClick={handleCloseClick} fontSize="1.3rem" fontWeight="600" color='aqua' />

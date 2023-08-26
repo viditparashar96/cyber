@@ -12,6 +12,7 @@
   align-items: center;
   /* background-color: bisque; */
 }
+
 .servicesBlock {
   width: 100vw;
   min-height: 50vh;
@@ -49,5 +50,12 @@ border: none;
 .serviceBox:hover .servicesBlock {
   display: block; 
   opacity: 1;
+  
+}
+@media(max-width:768px){
+  .block{
+    border-right: none;
+    
+  }
   
 }
