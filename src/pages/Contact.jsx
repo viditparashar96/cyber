@@ -1,12 +1,96 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../components/Navbar';
+import { FaMapMarkerAlt } from 'react-icons/fa'
+import { IoIosCall } from 'react-icons/io'
+import { BiLogoGmail } from 'react-icons/bi'
+import ReCAPTCHA from "react-google-recaptcha"
+import Footer from '../components/Footer';
+import PageHeader from '../components/PageHeader';
+
 function Contact() {
+  const [isVerify, setIsverify] = useState(false)
+  function onChange(value) {
+    console.log("Captcha value:", value);
+    setIsverify(true)
+  }
   return (
     <div className='text-white'>
-                     <Navbar />
+      <Navbar />
+      {/* Contact Hero */}
+      <PageHeader heading="CONTACT US"/>
 
-      Contact
+      <div className='w-full   flex-col md:flex-row flex'>
+        <div className="left md:pl-0 pl-3   w-full md:w-[50%] h-[50%] md:h-[100%] flex flex-col justify-start md:justify-center items-start md:items-center">
+          <div className='pt-4 '>
+            <div>
+            </div>
+            <h1 className='pl-4 border-l-4 border-cyan-400 md:text-lg text-sm font-semibold'>CONTACT FORM</h1>
+            <form className='flex flex-col gap-4 py-6 items-start'>
+              <div className='flex md:flex-row flex-col md:space-x-8'>
+                <div>
+
+                  <h1 className='mb-2'>Name <sup className='text-red-800'>*</sup></h1>
+                  <input type="text" className=' bg-[#1111117b] rounded-sm border border-cyan-400  border-opacity-20 outline-none pl-2' placeholder='Name' />
+                </div>
+                <div>
+                  <h1 className='mb-2'>Email <sup className='text-red-800'>*</sup></h1>
+                  <input type="email" className=' bg-[#1111117b] rounded-sm border border-cyan-400  border-opacity-20 outline-none pl-2' placeholder='Email' />
+                </div>
+              </div>
+
+              <div>
+                <h1 className='mb-2'>Subject <sup className='text-red-800'>*</sup></h1>
+                <input type="text" className=' bg-[#1111117b] rounded-sm border border-cyan-400  border-opacity-20 outline-none pl-2' placeholder='Subject' />
+              </div>
+              <div>
+                <h1 className='mb-2'>Message <sup className='text-red-800'>*</sup></h1>
+                <textarea name="" id="" cols="40" rows="7" className='rounded-sm bg-[#1111117b] border border-opacity-20 border-cyan-400 pl-2 pt-2 outline-none' placeholder='Message'>
+
+                </textarea>
+              </div>
+              <div>
+
+                <ReCAPTCHA
+                  sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                  onChange={onChange}
+                  theme='dark'
+
+                />
+              </div>
+              <button className={` ${isVerify ? " bg-cyan-400": "bg-[#1111117b]"} p-3 rounded-sm ${isVerify ?" cursor-pointer":" cursor-not-allowed"}`} disabled={!isVerify}>Submit</button>
+
+            </form>
+          </div>
+
+        </div>
+        <div className="right flex  flex-col justify-start pl-3 md:pl-5 p-4  w-full md:w-[50%]  h-[50%] md:h-[100%]">
+        <h5 className=' md:text-lg text-sm pl-4 border-l-4 border-cyan-400 font-semibold text-[#b0b0b0]'>CONTACT US</h5>
+
+          <div className=" flex flex-col space-y-8 mt-[5vw]">
+            <div className='mt-7 flex space-x-3 w-full'>
+              <FaMapMarkerAlt />
+              <p className='md:w-8/12 w-full md:text-lg text-sm text-[#b0b0b0]'>
+                <span className=' font-semibold text-cyan-400'>	ISECURION TECHNOLOGY & CONSULTING PVT. LTD.</span> <br />
+                2nd Floor,#670,6th main road,RBI Layout,Opposite Elita Promenade, J P Nagar 7th Phase, Bengaluru - 560078, Karnataka, INDIA
+              </p>
+            </div>
+            <div className='flex space-x-3 items-center'>
+              <IoIosCall />
+              <p className=' text-[#b0b0b0] md:text-lg text-sm'>+918861201570</p>
+            </div>
+            <div className='flex items-center space-x-3'>
+              <BiLogoGmail />
+              <p className='md:text-lg text-sm text-[#b0b0b0]'>info@isecurion.com</p>
+            </div>
+          </div>
+
+
+        </div>
+
+
       </div>
+      <Footer/>
+    </div>
   )
 }
 

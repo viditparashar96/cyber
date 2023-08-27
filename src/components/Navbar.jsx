@@ -62,7 +62,7 @@ function Navbar() {
 
   return (
     <div className='relative  shadow-cyan-400 shadow-sm'>
-      <div className='flex z-20 w-full  items-center justify-between p-7 px-6 md:px-10'>
+      <div className='flex z-20 w-full  items-center justify-between p-3 px-6 md:px-10'>
         <div>
           {/* <h1 className='text-4xl font-bold  text-cyan-400 mb-5'>Logo</h1> */}
           <img src={logo} className='w-[60px] mb-0 md:mb-4' alt="" />

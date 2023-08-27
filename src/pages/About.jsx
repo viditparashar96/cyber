@@ -1,16 +1,14 @@
 import React from 'react'
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import PageHeader from '../components/PageHeader';
 
 function About() {
   return (
     <div className='text-white w-full bg-black'>
       <Navbar />
       <div className='min-h-[70vh]'>
-        <div className="header w-full font-semibold text-2xl bg-[#31303062] p-4 rounded-md">
-          <h1 className=' mt-[1vw] ml-[16vw] text-cyan-400'>ABOUT US</h1>
-
-        </div>
+        <PageHeader heading="ABOUT US"/>
         <div className=' md:pl-0 pl-4 md:w-8/12 w-full mx-auto flex flex-col gap-10 mt-[3vw]'>
           <div>
             <p className=' text-[#b0b0b0]'>
