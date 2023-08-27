@@ -6,18 +6,70 @@ import { BiLogoGmail } from 'react-icons/bi'
 import ReCAPTCHA from "react-google-recaptcha"
 import Footer from '../components/Footer';
 import PageHeader from '../components/PageHeader';
+import toast from 'react-hot-toast';
 
+import axios from "axios"
 function Contact() {
   const [isVerify, setIsverify] = useState(false)
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: ""
+  })
   function onChange(value) {
-    console.log("Captcha value:", value);
+    // console.log("Captcha value:", value);
     setIsverify(true)
+
+  }
+  function handleChange(e) {
+    const { name, value } = e.target
+    setFormData((prev) => {
+      return {
+        ...prev,
+        [name]: value
+      }
+    })
+  }
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const { name, value } = e.target
+    setFormData((prev) => {
+      return {
+        ...prev,
+        [name]: value
+      }
+    })
+    if(formData.email<=0 || formData.name<=0 || formData.subject<=0 || formData.message<=0){
+      toast.error("Fill up the mandotory fields")
+    }
+    else{
+
+   
+    // console.log(formData)
+    try {
+      const res = await axios.post("https://cyberback-vvvi.onrender.com/contact", formData)
+      if (res.data.success) {
+
+        toast.success("Email set successfully")
+      }
+      else {
+        toast.error("Something is wrong")
+
+      }
+
+
+    } catch (error) {
+      toast.error(error.message)
+      console.log(error)
+    }
+  }
   }
   return (
     <div className='text-white'>
       <Navbar />
       {/* Contact Hero */}
-      <PageHeader heading="CONTACT US"/>
+      <PageHeader heading="CONTACT US" />
 
       <div className='w-full   flex-col md:flex-row flex'>
         <div className="left md:pl-0 pl-3   w-full md:w-[50%] h-[50%] md:h-[100%] flex flex-col justify-start md:justify-center items-start md:items-center">
@@ -25,26 +77,26 @@ function Contact() {
             <div>
             </div>
             <h1 className='pl-4 border-l-4 border-cyan-400 md:text-lg text-sm font-semibold'>CONTACT FORM</h1>
-            <form className='flex flex-col gap-4 py-6 items-start'>
+            <form className='flex flex-col gap-4 py-6 items-start' onSubmit={handleSubmit}>
               <div className='flex md:flex-row flex-col md:space-x-8'>
                 <div>
 
                   <h1 className='mb-2'>Name <sup className='text-red-800'>*</sup></h1>
-                  <input type="text" className=' bg-[#1111117b] rounded-sm border border-cyan-400  border-opacity-20 outline-none pl-2' placeholder='Name' />
+                  <input name='name' value={formData.name} onChange={handleChange} type="text" className=' bg-[#1111117b] rounded-sm border border-cyan-400  border-opacity-20 outline-none pl-2' placeholder='Name' />
                 </div>
                 <div>
                   <h1 className='mb-2'>Email <sup className='text-red-800'>*</sup></h1>
-                  <input type="email" className=' bg-[#1111117b] rounded-sm border border-cyan-400  border-opacity-20 outline-none pl-2' placeholder='Email' />
+                  <input name='email' value={formData.email} onChange={handleChange} type="email" className=' bg-[#1111117b] rounded-sm border border-cyan-400  border-opacity-20 outline-none pl-2' placeholder='Email' />
                 </div>
               </div>
 
               <div>
                 <h1 className='mb-2'>Subject <sup className='text-red-800'>*</sup></h1>
-                <input type="text" className=' bg-[#1111117b] rounded-sm border border-cyan-400  border-opacity-20 outline-none pl-2' placeholder='Subject' />
+                <input name='subject' value={formData.subject} onChange={handleChange} type="text" className=' bg-[#1111117b] rounded-sm border border-cyan-400  border-opacity-20 outline-none pl-2' placeholder='Subject' />
               </div>
               <div>
                 <h1 className='mb-2'>Message <sup className='text-red-800'>*</sup></h1>
-                <textarea name="" id="" cols="40" rows="7" className='rounded-sm bg-[#1111117b] border border-opacity-20 border-cyan-400 pl-2 pt-2 outline-none' placeholder='Message'>
+                <textarea name="message" value={formData.message} onChange={handleChange} id="" cols="40" rows="7" className='rounded-sm bg-[#1111117b] border border-opacity-20 border-cyan-400 pl-2 pt-2 outline-none' placeholder='Message'>
 
                 </textarea>
               </div>
@@ -57,14 +109,14 @@ function Contact() {
 
                 />
               </div>
-              <button className={` ${isVerify ? " bg-cyan-400": "bg-[#1111117b]"} p-3 rounded-sm ${isVerify ?" cursor-pointer":" cursor-not-allowed"}`} disabled={!isVerify}>Submit</button>
+              <button className={` ${isVerify ? " bg-cyan-400" : "bg-[#1111117b]"} p-3 rounded-sm ${isVerify ? " cursor-pointer" : " cursor-not-allowed"}`} disabled={!isVerify}>Submit</button>
 
             </form>
           </div>
 
         </div>
         <div className="right flex  flex-col justify-start pl-3 md:pl-5 p-4  w-full md:w-[50%]  h-[50%] md:h-[100%]">
-        <h5 className=' md:text-lg text-sm pl-4 border-l-4 border-cyan-400 font-semibold text-[#b0b0b0]'>CONTACT US</h5>
+          <h5 className=' md:text-lg text-sm pl-4 border-l-4 border-cyan-400 font-semibold text-[#b0b0b0]'>CONTACT US</h5>
 
           <div className=" flex flex-col space-y-8 mt-[5vw]">
             <div className='mt-7 flex space-x-3 w-full'>
@@ -89,7 +141,7 @@ function Contact() {
 
 
       </div>
-      <Footer/>
+      <Footer />
     </div>
   )
 }
