@@ -45,6 +45,12 @@ function Contact() {
     }
     else{
 
+      if(!formData.email.includes("gmail")){
+        toast.error("Enter correct gmail")
+
+      }
+      else{
+        
    
     // console.log(formData)
     try {
@@ -63,6 +69,8 @@ function Contact() {
       toast.error(error.message)
       console.log(error)
     }
+  }
+
   }
   }
   return (
