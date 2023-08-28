@@ -48,7 +48,7 @@ function Contact() {
    
     // console.log(formData)
     try {
-      const res = await axios.post("https://cyberback-vvvi.onrender.com/contact", formData)
+      const res = await axios.post("http://localhost:5000/contact", formData)
       if (res.data.success) {
 
         toast.success("Email set successfully")
@@ -96,7 +96,7 @@ function Contact() {
               </div>
               <div>
                 <h1 className='mb-2'>Message <sup className='text-red-800'>*</sup></h1>
-                <textarea name="message" value={formData.message} onChange={handleChange} id="" cols="40" rows="7" className='rounded-sm bg-[#1111117b] border border-opacity-20 border-cyan-400 pl-2 pt-2 outline-none' placeholder='Message'>
+                <textarea name="message" value={formData.message} onChange={handleChange}  className='rounded-sm bg-[#1111117b] border border-opacity-20 border-cyan-400 pl-2 pt-2 outline-none min-w-[300px] md:min-w-[400px] min-h-[200px]' placeholder='Message'>
 
                 </textarea>
               </div>
