@@ -59,3 +59,11 @@ border: none;
   }
   
 }
+.num{
+  display: initial;
+}
+@media(max-width:768px){
+  .num{
+    display: none;
+  }
+}

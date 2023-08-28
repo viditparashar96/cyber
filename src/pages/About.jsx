@@ -12,11 +12,11 @@ function About() {
         <div className=' md:pl-0 pl-4 md:w-8/12 w-full mx-auto flex flex-col gap-10 mt-[3vw]'>
           <div>
             <p className=' text-[#b0b0b0]'>
-            <span className=' text-cyan-400 font-semibold'>ISECURION</span> is an ISO 27001:2013 certified information security consulting company providing out-most service quality, innovation and research in the field of Information Security and Technology. We provide a unique blend of services to our customers catering to the current information security landscape.
+            <span className=' text-cyan-400 font-semibold'>Global Infosec</span> is an ISO 27001:2013 certified information security consulting company providing out-most service quality, innovation and research in the field of Information Security and Technology. We provide a unique blend of services to our customers catering to the current information security landscape.
             </p>
           </div>
           <div>
-            <p className=' text-[#b0b0b0]'>Our business oriented approach helps us understand our client’s security requirements based on their business type and processes related to it. Along with identifying critical loopholes in our client systems, Isecurion also provides support in remediation by aligning them with industry best practices and compliance requirements.</p>
+            <p className=' text-[#b0b0b0]'>Our business oriented approach helps us understand our client’s security requirements based on their business type and processes related to it. Along with identifying critical loopholes in our client systems, Global Infosecalso provides support in remediation by aligning them with industry best practices and compliance requirements.</p>
           </div>
           <div className='flex flex-col space-y-5'>
             <h1 className='text-cyan-500 font-semibold border-l-4 pl-4 border-cyan-500'>OUR VISION</h1>

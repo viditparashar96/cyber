@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import '../App.css';
 
 import Serviceblog from '../components/Serviceblog';
 import PageHeader from '../components/PageHeader'
@@ -16,12 +17,12 @@ import img6 from "../images/img6.png"
 
 function Services() {
   return (
-    <div className='text-white'>
+    <div className='text-[#b0b0b0]'>
       <Navbar />
       <PageHeader heading="SERVICES" />
       <div className='md:w-7/12 w-full mx-auto md:mb-0 mb-6 bg-black'>
         <div className='py-5 flex gap-8 items-center text-9xl' >
-          <h1 className='md:visible hidden'>O1</h1>
+          <h1 className='num text-white'>O1</h1>
           <h1 className='md:text-4xl text-2xl  text-cyan-400 text-center font-semibold'>WE PROVIDE BEST OPTION TO SECURE YOUR DATA</h1>
         </div>
         <div className='mt-4 justify-center flex flex-wrap gap-7'>

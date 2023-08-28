@@ -7,7 +7,7 @@ function Serviceblog({img,title,para}) {
             <img src={img} alt="cloud" width={60}/>
         </div>
         <div>
-            <h1 className=' border-b-2 border-b-white font-semibold py-2'>{title}</h1>
+            <h1 className=' border-b-2 border-b-white font-semibold py-2 text-white'>{title}</h1>
         </div>
         <div>
             <p>{para}</p>

@@ -15,7 +15,7 @@ function Footer() {
                 <div className="left md:w-[50%] p-3 ">
                     <h5 className=' text-xs font-semibold  text-[#b0b0b0]'>ABOUT US</h5>
                     <p className='mt-7 text-sm  text-[#b0b0b0]'>
-                       <span className=' font-semibold text-cyan-400'>ISECURION</span> is an information security company providing out-most service quality, innovation and research in the field of Information Security and Technology. We provide a unique blend of services to our customers catering to the current information security landscape
+                       <span className=' font-semibold text-cyan-400'>Global Infosec</span> is an information security company providing out-most service quality, innovation and research in the field of Information Security and Technology. We provide a unique blend of services to our customers catering to the current information security landscape
                     </p>
                 </div>
                 <div className="right w-full  md:w-[50%]   pt-3 md:pl-0 pl-2 md:ml-4 flex flex-col space-y-8">
@@ -23,8 +23,8 @@ function Footer() {
                     <div className='mt-7 flex space-x-3 w-full'>
                     <FaMapMarkerAlt/>
                     <p className='md:w-8/12 w-full text-sm  text-[#b0b0b0]'>
-                        <span  className=' font-semibold text-cyan-400'>	ISECURION TECHNOLOGY & CONSULTING PVT. LTD.</span> <br />
-                        2nd Floor,#670,6th main road,RBI Layout,Opposite Elita Promenade, J P Nagar 7th Phase, Bengaluru - 560078, Karnataka, INDIA
+                        <span  className=' font-semibold text-cyan-400'>	Global Infosec TECHNOLOGY & CONSULTING PVT. LTD.</span> <br />
+                        1st Floor, Plot No. 16, Near SBI BANK Behind Sultanpur Metro Station, New Delhi 110030
                     </p>
                     </div>
                     <div className='flex space-x-3 items-center'>
@@ -33,7 +33,7 @@ function Footer() {
                     </div>
                     <div className='flex items-center space-x-3'>
                         <BiLogoGmail/>
-                        <p className='text-sm  text-[#b0b0b0]'>info@isecurion.com</p>
+                        <p className='text-sm  text-[#b0b0b0]'>info@Global Infosec.com</p>
                     </div>
                 </div>
 
@@ -46,15 +46,15 @@ function Footer() {
                             |
                              <Link className=' text-[#b0b0b0]'>Disclaimer</Link>
                              |
-                             <Link className=' text-[#b0b0b0]'>Terns of Use</Link>
+                             <Link className=' text-[#b0b0b0]'>Terms of Use</Link>
 
                         </div>
                         <div className='flex justify-center md:justify-start items-center gap-x-2 text-xs mt-2'>
                             <p className=' text-[#b0b0b0]'>
-                            Copyright © 2020 isecurion 
+                            Copyright © 2020 Global Infosec 
                             </p>
                         |  
-                        <p className=' text-[#b0b0b0]'> Copyright © 2020 isecurion </p>
+                        <p className=' text-[#b0b0b0]'> Copyright © 2020 Global Infosec </p>
 
                         </div>
                     </div>

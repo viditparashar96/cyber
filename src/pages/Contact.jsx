@@ -124,23 +124,23 @@ function Contact() {
 
         </div>
         <div className="right flex  flex-col justify-start pl-3 md:pl-5 p-4  w-full md:w-[50%]  h-[50%] md:h-[100%]">
-          <h5 className=' md:text-lg text-sm pl-4 border-l-4 border-cyan-400 font-semibold text-[#b0b0b0]'>CONTACT US</h5>
+          <h5 className=' md:text-lg text-sm pl-4 border-l-4 border-cyan-400 font-semibold '>CONTACT US</h5>
 
           <div className=" flex flex-col space-y-8 mt-[5vw]">
             <div className='mt-7 flex space-x-3 w-full'>
               <FaMapMarkerAlt />
-              <p className='md:w-8/12 w-full md:text-lg text-sm text-[#b0b0b0]'>
-                <span className=' font-semibold text-cyan-400'>	ISECURION TECHNOLOGY & CONSULTING PVT. LTD.</span> <br />
-                2nd Floor,#670,6th main road,RBI Layout,Opposite Elita Promenade, J P Nagar 7th Phase, Bengaluru - 560078, Karnataka, INDIA
+              <p className='md:w-8/12 w-full md:text-md text-sm text-[#b0b0b0]'>
+                <span className=' font-semibold text-cyan-400'>	Global Infosec TECHNOLOGY & CONSULTING PVT. LTD.</span> <br />
+                1st Floor, Plot No. 16, Near SBI BANK Behind Sultanpur Metro Station, New Delhi 110030
               </p>
             </div>
             <div className='flex space-x-3 items-center'>
               <IoIosCall />
-              <p className=' text-[#b0b0b0] md:text-lg text-sm'>+918861201570</p>
+              <p className=' text-[#b0b0b0] md:text-md text-sm'>+918861201570</p>
             </div>
             <div className='flex items-center space-x-3'>
               <BiLogoGmail />
-              <p className='md:text-lg text-sm text-[#b0b0b0]'>info@isecurion.com</p>
+              <p className='md:text-md text-sm text-[#b0b0b0]'>info@Global Infosec.com</p>
             </div>
           </div>
 
