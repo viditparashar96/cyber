@@ -48,7 +48,7 @@ function Contact() {
    
     // console.log(formData)
     try {
-      const res = await axios.post("http://localhost:5000/contact", formData)
+      const res = await axios.post("https://cyberback-vvvi.onrender.com/contact", formData)
       if (res.data.success) {
 
         toast.success("Email set successfully")
@@ -66,7 +66,7 @@ function Contact() {
   }
   }
   return (
-    <div className='text-white'>
+    <div className='text-white overflow-x-hidden'>
       <Navbar />
       {/* Contact Hero */}
       <PageHeader heading="CONTACT US" />
