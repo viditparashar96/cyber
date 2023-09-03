@@ -12,7 +12,7 @@ import Notfound from './pages/Notfound';
 
 function App() {
   return (
-    <div className='bg-black w-full'>
+    <div className='bg-black w-full overflow-x-hidden'>
       
       
 
