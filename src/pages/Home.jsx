@@ -26,14 +26,14 @@ function Home() {
 
         }
       })
-      tl.current.fromTo(".h1", { opacity:0 ,y:300, },{opacity:1,y:110})
+      tl.current.fromTo(".h1", { opacity:0 ,y:300, },{opacity:1,y:0})
       tl.current.fromTo(".h1", { opacity:1 , },{opacity:0,})
 
 
-      tl.current.fromTo(".h2", { opacity:0 ,y:300, },{opacity:1,y:-90})
+      tl.current.fromTo(".h2", { opacity:0 ,y:300, },{opacity:1,y:0})
       tl.current.fromTo(".h2", { opacity:1},{opacity:0})
 
-      tl.current.fromTo(".h3", { opacity:0 ,y:300,},{opacity:1,y:-300})
+      tl.current.fromTo(".h3", { opacity:0 ,y:300,},{opacity:1,y:0})
       tl.current.fromTo(".h3", { opacity:1},{opacity:0})
 
 
